@@ -1,0 +1,71 @@
+﻿@model WCFAssignment1.ViewModel.ServiceViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/APPScript.js"></script>
+
+
+<div class="jumbotron">
+    <h1>Get the Details from Service </h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Message Details</h2>
+
+        @Html.TextBoxFor(m => m.MessageModel.Name, new { @class = "form-control" })
+        <input type="button" id="btnGetHTTPMessage" value="Get HTTP Message" class="form-control" style="background-color:aquamarine"/>
+        @Html.TextBoxFor(m => m.MessageModel.Message, new {  @class="form-control"})
+
+        @Html.TextBoxFor(m => m.MessageModel.User, new { @class = "form-control" })
+        <input type="button" id="btnGetTCPMessage" value="Get TCP Message" class="form-control" style="background-color:aquamarine"/>
+        @Html.TextBoxFor(m => m.MessageModel.UserMessage, new {  @class = "form-control" })
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Job Details</h2>
+        @if (Model.JobModel.JobDetailList != null)
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <td>Job ID</td>
+                        <td>Job Role</td>
+                        <td>Job Description</td>
+                    </tr>
+                </thead>
+                @foreach (var item in Model.JobModel.JobDetailList)
+                {
+                    <tr>
+                        <td>@item.JobID</td>
+                        <td>@item.JobRole</td>
+                        <td>@item.JobDescription</td>
+                    </tr>
+                }
+            </table>
+        }
+
+
+        @Html.TextBoxFor(m => m.JobModel.JobRole, new { @class = "form-control" })
+        <input type="button" id="btnGetJobByRole" value="Get Job By Role" class="form-control" style="background-color:aquamarine"/>
+        <div id="detailsDiv">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <h2>Calculator</h2>
+        <label>First Number :</label>
+        @Html.TextBoxFor(m => m.CalculatorModel.FirstNumber, new { @class = "form-control" })
+        <label>Second Number :</label>
+        @Html.TextBoxFor(m => m.CalculatorModel.SecondNumber, new { @class = "form-control" })
+        <label>Result</label>
+        @Html.TextBoxFor(m => m.CalculatorModel.Result, new { disabled = "disabled", @class = "form-control" })
+        <input type="button" id="btnAddition" value="Addition" class="form-control" style="background-color:aquamarine" />
+        <input type="button" id="btnSubtraction" value="Subtraction"  class="form-control" style="background-color:aquamarine" />
+    </div>
+</div>

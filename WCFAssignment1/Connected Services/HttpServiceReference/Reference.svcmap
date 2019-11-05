@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2a2287f-4801-4597-91af-b2947bcac726" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8081/BasicHttp.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BasicHttp.disco" MetadataType="Disco" ID="fc763057-c318-4d28-9d16-a6070d80340e" SourceId="1" SourceUrl="http://localhost:8081/BasicHttp.svc?disco" />
+    <MetadataFile FileName="BasicHttp.xsd" MetadataType="Schema" ID="2bbcd902-3e19-4ba5-909b-8e4c2e0dbc24" SourceId="1" SourceUrl="http://localhost:8081/BasicHttp.svc?xsd=xsd0" />
+    <MetadataFile FileName="BasicHttp.wsdl" MetadataType="Wsdl" ID="4f648fa9-d04e-423d-bf05-af6788b7072b" SourceId="1" SourceUrl="http://localhost:8081/BasicHttp.svc?wsdl" />
+    <MetadataFile FileName="BasicHttp1.xsd" MetadataType="Schema" ID="cd963ccd-2164-423c-a39d-6046886af813" SourceId="1" SourceUrl="http://localhost:8081/BasicHttp.svc?xsd=xsd1" />
+    <MetadataFile FileName="BasicHttp2.xsd" MetadataType="Schema" ID="01f95e01-8b20-4e81-8e94-e5f858c33ba9" SourceId="1" SourceUrl="http://localhost:8081/BasicHttp.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

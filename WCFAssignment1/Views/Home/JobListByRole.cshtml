@@ -1,0 +1,23 @@
+﻿@model WCFAssignment1.ViewModel.JobViewModel
+
+@if (Model.JobDetailList != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <td>Job ID</td>
+                <td>Job Role</td>
+                <td>Job Description</td>
+            </tr>
+        </thead>
+        @foreach (var item in Model.JobDetailList)
+        {
+            <tr>
+                <td>@item.JobID</td>
+                <td>@item.JobRole</td>
+                <td>@item.JobDescription</td>
+            </tr>
+        }
+    </table>
+}
+
